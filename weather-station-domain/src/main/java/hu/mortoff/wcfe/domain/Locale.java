@@ -1,13 +1,9 @@
 package hu.mortoff.wcfe.domain;
 
-
 import java.io.Serializable;
 
 public class Locale implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 7972414865111303992L;
 
 	private String name;

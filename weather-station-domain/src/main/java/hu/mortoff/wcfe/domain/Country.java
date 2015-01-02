@@ -6,9 +6,6 @@ import java.util.Date;
 
 public class Country implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2757470301503368303L;
 
 	private Long id;

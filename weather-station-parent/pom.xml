@@ -3,19 +3,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>hu.mortoff</groupId>
 	<artifactId>weather-station-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Weather Station</name>
+	<name>weather-station-parent</name>
 	<description>Spring + JaxWS integration example</description>
 
 
 	<!-- Modul projects -->
 	<modules>
-		<module>../weather-station</module>
-		<module>../weather-station-client</module>
+		<module>../weather-station-common</module>
 		<module>../weather-station-domain</module>
-		<module>../weather-station-impl</module>
 		<module>../weather-station-repository</module>
+		<module>../weather-station</module>
+		<module>../weather-station-impl</module>
+		<module>../weather-station-client</module>
 	</modules>
 
 	<!-- Weather station Project properties -->
@@ -25,8 +26,11 @@
 		<spring.version>4.0.0.RELEASE</spring.version>
 
 		<junit.version>4.12</junit.version>
+
+		<build.plugins.plugin.version>2.3.1</build.plugins.plugin.version>
 	</properties>
 
+	<!-- Weather station dependency management -->
 	<dependencyManagement>
 		<dependencies>
 
@@ -94,31 +98,34 @@
 				<version>4.0.7</version>
 			</dependency>
 
+			<!-- Own projects -->
 			<dependency>
 				<groupId>hu.mortoff</groupId>
 				<artifactId>weather-station-domain</artifactId>
-				<version>${version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>hu.mortoff</groupId>
 				<artifactId>weather-station-repository</artifactId>
-				<version>${version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>hu.mortoff</groupId>
 				<artifactId>weather-station</artifactId>
-				<version>${version}</version>
+				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
+	<!-- Build configuration -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${build.plugins.plugin.version}</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
