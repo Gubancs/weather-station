@@ -1,7 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>weather-station-impl</artifactId>
+	<artifactId>wcfe-webservice-impl</artifactId>
+	<name>wcfe-webservice-impl</name>
 	<packaging>war</packaging>
 
 	<!-- Dependencies -->
@@ -56,20 +57,20 @@
 		</dependency>
 		<dependency>
 			<groupId>hu.mortoff</groupId>
-			<artifactId>weather-station</artifactId>
+			<artifactId>wcfe-webservice</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>hu.mortoff</groupId>
-			<artifactId>weather-station-repository</artifactId>
+			<artifactId>wcfe-repository</artifactId>
 		</dependency>
 	</dependencies>
 
 	<!-- Parent project -->
 	<parent>
 		<groupId>hu.mortoff</groupId>
-		<artifactId>weather-station-parent</artifactId>
+		<artifactId>wcfe-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../weather-station-parent/pom.xml</relativePath>
+		<relativePath>../wcfe-parent/pom.xml</relativePath>
 	</parent>
-	<name>weather-station-impl</name>
+
 </project>
